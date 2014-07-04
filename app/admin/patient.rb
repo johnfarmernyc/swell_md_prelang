@@ -1,4 +1,5 @@
 ActiveAdmin.register Patient do
+  permit_params :fname, :phone, :lname, :email, :dob
 
   
   # See permitted parameters documentation:
