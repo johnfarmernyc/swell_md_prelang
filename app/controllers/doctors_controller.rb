@@ -29,6 +29,7 @@ class DoctorsController < ApplicationController
   # POST /doctors.json
   def create
     @doctor = Doctor.new(doctor_params)
+    @doctor.user = current_user
 
     respond_to do |format|
       if @doctor.save
