@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :appointments
+
   resources :doctors
 
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords"}, skip: [:sessions, :registrations]
